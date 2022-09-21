@@ -3,7 +3,7 @@
 ### <br/><br/><br/>
 
 ###############################################################################################################################################
-### google cloud 웹에서 사용하는 방법 start
+# google cloud 웹에서 사용하는 방법 start
 ### <br/><br/><br/>
 
 ## 가입
@@ -112,5 +112,41 @@ translate_text_with_model("ko", "en", "This is my first translation.", model="nm
 
 ### <br/><br/><br/>
 
-### google cloud 웹에서 사용하는 방법 end
+# google cloud 웹에서 사용하는 방법 end
 ###############################################################################################################################################
+# 로컬에서 사용하는 방법
+### <br/><br/><br/>
+
+## 설치
+### 터미널 실행 후 설치한다. 버전은 아래 것을 써야 에러가 안 난다.
+```
+> python -m pip install googletrans==4.0.0-rc1
+```
+
+### <br/><br/><br/>
+
+## 실행
+```
+# python -m pip install googletrans==4.0.0-rc1 설치 후 사용
+
+import googletrans
+
+translator = googletrans.Translator()
+
+str1 = "개발을 잘하고 싶습니다."
+str2 = "This is my first translation using google translation module !!!"
+result1 = translator.translate(str1, src='ko', dest='en')
+result2 = translator.translate(str2, src='en', dest='ko')
+
+print(result1.text)
+print(result2.text)
+```
+
+### <br/><br/><br/>
+
+## 결과
+![image](https://user-images.githubusercontent.com/62974484/191554915-f3b8508f-6392-457e-91fe-264daf9c9fc5.png)
+
+### <br/><br/><br/>
+
+http://upload2.inven.co.kr/upload/2019/10/25/bbs/i15116832331.gif
